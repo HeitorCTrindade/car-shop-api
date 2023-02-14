@@ -35,7 +35,6 @@ abstract class AbstractVehiclesODM<T> {
   public async getAll(): Promise<T[]> {
     return this.model.find({});
   }
-
   public async getById(id: string): Promise<T[]> {
     if (!isValidObjectId(id)) throw Error('Invalid Mongo id');
     return this.model.find({ _id: id }, { model: 1 });
