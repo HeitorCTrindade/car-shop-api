@@ -37,7 +37,7 @@ abstract class AbstractVehiclesODM<T> {
   }
 
   public async getById(id: string): Promise<T | null> {
-    if (!isValidObjectId(id)) throw new Error('Invalid Mongo id');
+    if (!isValidObjectId(id)) throw new Error('Invalid mongo id');
     return this.model.findById(id);
   }
 }

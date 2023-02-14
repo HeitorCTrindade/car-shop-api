@@ -37,7 +37,7 @@ class CarController {
   public async listAllCars() {
     try {
       const allCars = await this.service.getAllCars();
-      return this.res.status(201).json(allCars);
+      return this.res.status(200).json(allCars);
     } catch (error) {
       this.next(error);
     }
@@ -48,7 +48,7 @@ class CarController {
     try {
       const car = await this.service.getCarById(id);
       if (!car) return this.res.status(404).json({ message: 'Car not found' });
-      return this.res.status(201).json(car);
+      return this.res.status(200).json(car);
     } catch (erro: any) {
       this.res.status(422).json({ message: erro.message });     
     }
