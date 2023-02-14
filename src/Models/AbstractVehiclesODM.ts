@@ -23,7 +23,7 @@ abstract class AbstractVehiclesODM<T> {
 
   public async update(id: string, obj: Partial<T>):
   Promise<T | null> {
-    if (!isValidObjectId(id)) throw Error('Invalid Mongo id');
+    if (!isValidObjectId(id)) throw new Error('Invalid Mongo id');
     
     return this.model.findByIdAndUpdate(
       { _id: id },
@@ -35,9 +35,10 @@ abstract class AbstractVehiclesODM<T> {
   public async getAll(): Promise<T[]> {
     return this.model.find({});
   }
-  public async getById(id: string): Promise<T[]> {
-    if (!isValidObjectId(id)) throw Error('Invalid Mongo id');
-    return this.model.find({ _id: id }, { model: 1 });
+
+  public async getById(id: string): Promise<T | null> {
+    if (!isValidObjectId(id)) throw new Error('Invalid Mongo id');
+    return this.model.findById(id);
   }
 }
 

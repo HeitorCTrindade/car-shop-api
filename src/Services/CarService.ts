@@ -12,9 +12,21 @@ class CarService {
 
   public async addCar(car: ICar) {
     const carODM = new CarODM();
-    const newCar = await carODM.create(car);
-    console.log(newCar);    
+    const newCar = await carODM.create(car);    
     return this.createCarDomain(newCar);
+  }
+
+  public async getAllCars() {
+    const carODM = new CarODM();
+    const allCars = await carODM.getAll(); 
+    const allCarsFormated = allCars.map((car) => this.createCarDomain(car));    
+    return allCarsFormated;
+  }
+
+  public async getCarById(id: string) {
+    const carODM = new CarODM();
+    const car = await carODM.getById(id); 
+    return this.createCarDomain(car);
   }
 }
 
