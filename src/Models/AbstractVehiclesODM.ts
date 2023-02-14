@@ -21,9 +21,9 @@ abstract class AbstractVehiclesODM<T> {
     return this.model.create({ ...obj });
   }
 
-  public async update(id: string, obj: Partial<T>):
+  public async updateById(id: string, obj: Partial<T>):
   Promise<T | null> {
-    if (!isValidObjectId(id)) throw new Error('Invalid Mongo id');
+    if (!isValidObjectId(id)) throw new Error('Invalid mongo id');
     
     return this.model.findByIdAndUpdate(
       { _id: id },
