@@ -1,12 +1,7 @@
-type MotorcycleCategory = 'street' | 'custom' | 'trail';
+import IVehicle from './IVehicle';
+import MotorcycleCategory from './types/MotorcycleCategory';
 
-interface IMotorcycle {
-  id?: string;
-  model: string;
-  year: number;
-  color: string;
-  status: boolean;
-  buyValue: number;
+interface IMotorcycle extends IVehicle {  
   category: MotorcycleCategory;
   engineCapacity: number;
 }
