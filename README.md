@@ -62,8 +62,6 @@ Além disso, criei testes unitários utilizando a abordagem BDD (Behavior-driven
 
 </details>
 
-<br/>
-
 ## Funcionalidades
 
 Realizar operações de CRUD com o banco de dados. Internamente o Código trabalha com a objetos e utiliza os principios do POO (Abstração, Encapsulamento, Herança e Polimorfismo).
@@ -72,8 +70,6 @@ Realizar operações de CRUD com o banco de dados. Internamente o Código trabal
   <li>Criar, listar, atualizar e deletar carros.</li>
   <li>Criar, listar, atualizar e deletar motos.</li>
 </ul>
-
-<br/>
 
 ## Como Executar o Projeto
 
@@ -169,8 +165,6 @@ npm run test:coverage
 2. Configure as variável de ambiente `MONGO_DB_URL` com porta para o seu banco mongoDB no contexto local.
 
 </details>
-
-<br/>
 
 ## Endpoints
 
@@ -290,9 +284,6 @@ npm run test:coverage
 ---
 
 </details>
-
-<br/>
-
 
 ## Contato
 Projeto desenvolvido por Heitor C. Trindade :robot:.
