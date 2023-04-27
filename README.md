@@ -110,7 +110,7 @@ npm install
 npm run dev
 ```
 
-- 🧪 Para executar os testes, você pode utilizar os dois comandos abaixo. 🧪
+- 🧪Para executar os testes, você pode utilizar os dois comandos abaixo.🧪
 
 ```
 // Comando 1
@@ -159,7 +159,7 @@ npm run test:mocha
 npm run test:coverage
 ```
 
-- 🧪 Para o contexto de teste local, configure a variável de ambiente: 🧪
+- 🧪Para o contexto de teste local, configure a variável de ambiente:🧪
 
 1. Abra o arquivo `.env` (disponível na raíz do projeto);
 2. Configure as variável de ambiente `MONGO_DB_URL` com porta para o seu banco mongoDB no contexto local.
